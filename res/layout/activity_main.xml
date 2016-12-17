@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/activity_background"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+
+    <Switch
+        android:id="@+id/deviceSwitch"
+        android:enabled="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:thumb="@drawable/custom_switch"
+        android:track="@drawable/custom_switch_track"
+        android:textOff="Off"
+        android:textOn="On" />
+
+    <Button
+        android:id="@+id/deviceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/device_button_background"
+        android:textColor="@drawable/device_button_text"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Get Device" />
+
+    <LinearLayout
+        android:id="@+id/keyLayout"
+        android:background="@drawable/key_layout_background"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/octaveSelect"
+        android:layout_below="@+id/deviceButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:paddingRight="4dp"
+        android:paddingLeft="4dp"
+        android:layout_marginBottom="20dp"  >
+        
+          <Button
+            android:id="@+id/c_key"
+        	style="@style/key_view"
+            android:text="C1" />
+        
+        <Button
+            android:id="@+id/c_sharp_key"
+          	style="@style/key_sharp_view"
+            android:text="C#1"  />
+        
+         <Button
+            android:id="@+id/d_key"
+           	style="@style/key_view"
+            android:text="D1" />
+         
+         <Button
+             android:id="@+id/d_sharp_key"
+             style="@style/key_sharp_view"
+             android:text="D#1" />
+         
+         <Button
+            android:id="@+id/e_key"
+           	style="@style/key_view"
+            android:text="E1" />
+         
+         <Button
+            android:id="@+id/f_key"
+     		style="@style/key_view"
+            android:text="F1" />
+
+        <Button
+            android:id="@+id/f_sharp_key"
+            style="@style/key_sharp_view"
+            android:text="F#1"  />
+        
+        <Button
+            android:id="@+id/g_key"
+            style="@style/key_view"
+            android:text="G1"  />
+
+	    <Button
+	      android:id="@+id/g_sharp_key"
+	      style="@style/key_sharp_view"
+	      android:text="G#1" />
+
+        <Button
+            android:id="@+id/a_key"
+            style="@style/key_view"
+            android:text="A1" />
+
+		 <Button
+		     android:id="@+id/a_sharp_key"
+		     style="@style/key_sharp_view"
+		     android:text="A#1" />
+
+        <Button
+          android:id="@+id/b_key"
+          style="@style/key_view"
+            android:text="B1" />        
+            
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/octaveSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/keyLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/keyLayout"
+        android:max="6"
+        android:progress="0"
+        android:progressDrawable="@drawable/custom_seekbar"
+        android:thumb="@drawable/custom_seekbar_thumb" />
+
+    <TextView
+        android:id="@+id/noteView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>
